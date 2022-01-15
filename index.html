@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screenlock</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: rgb(255, 158, 158);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .container {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            display: none;
+            width: 40vw;
+            height: auto;
+            padding: 9vh;
+
+
+        }
+
+        .btn {
+            color: rgb(255, 0, 212);
+            width: 7vw;
+            padding: 5px;
+        }
+
+        button:hover {
+            background-color: rgb(123, 255, 0);
+        }
+
+        .para {
+            display: none;
+        }
+
+        .key {
+            width: 50vw;
+            height: 50vh;
+            text-align: center;
+            justify-content: center;
+            padding-top: 10vh;
+            margin-bottom: 5vh;
+
+        }
+
+        #key {
+            width: 20vw;
+            height: 5vh;
+            margin-bottom: 3vh;
+        }
+
+        #input {
+            width: 30vh;
+            height: 10vh;
+            background-color: rgba(238, 238, 238, 0.5);
+        }
+
+        .mybutton {
+            height: 50px;
+            width: 300px;
+            background-color: blue;
+            color: #fff;
+            border-radius: 50px;
+            border: 2px solid #ddd;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="key" id="keycontainer">
+
+        <h3>Enter the 4 Digit number</h3>
+        <input placeholder="SET YOUR PASSWORD " type="text" id="key" maxlength="4" minlength="4"
+            pattern="0,1,2,3,4,5,6,7,8,9"><br>
+
+        <button class="mybutton" onclick="submit()">Set Password</button>
+    </div>
+    <div class="container">
+        <h2>Enter the correct Key to Unlock Screen!</h2>
+
+        <input id="input" placeholder="Enter key here!" type="password" maxlength="4" minlength="4"
+            pattern="0,1,2,3,4,5,6,7,8,9">
+        <div class="buttons">
+
+            <button class="btn" onclick="number('1')">1</button>
+            <button class="btn" onclick="number('2')">2</button>
+            <button class="btn" onclick="number('3')">3</button><br>
+            <button class="btn" onclick="number('4')">4</button>
+            <button class="btn" onclick="number('5')">5</button>
+            <button class="btn" onclick="number('6')">6</button><br>
+            <button class="btn" onclick="number('7')">7</button>
+            <button class="btn" onclick="number('8')">8</button>
+            <button class="btn" onclick="number('9')">9</button><br>
+            <button class="btn" onclick="number('*')">*</button>
+            <button class="btn" onclick="number('0')">0</button>
+            <button class="btn" onclick="number('#')">#</button><br>
+            <button class="btn" onclick="unlock()">unlock</button>
+        </div>
+    </div>
+    <div class="para">
+        <h1>Screen Unlocked</h1>
+        <img src="kaish.jpg" width="500" height="700" />
+    </div>
+    <script src="unlock.js">
+       
+    </script>
+
+</body>
+
+</html
